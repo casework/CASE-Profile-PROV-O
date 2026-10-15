@@ -23,7 +23,8 @@ case_srcdir := $(top_srcdir)/dependencies/CASE
 uco_srcdir := $(case_srcdir)/dependencies/UCO
 
 generated_dependencies_ttls := \
-  $(top_srcdir)/dependencies/UCO-Profile-Example/dependencies/CDO-Shapes-Example/dependencies/formatted-example.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/dependencies/prov-o-dl.ttl \
+  $(top_srcdir)/dependencies/UCO-Profile-PROV-O/dependencies/CDO-Shapes-PROV-O/ontology/cdo-prov-o.ttl \
   $(case_srcdir)/tests/case_monolithic.ttl
 
 test_pys := $(wildcard test_*.py)

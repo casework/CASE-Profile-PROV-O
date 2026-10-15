@@ -59,10 +59,8 @@ all: \
 	git submodule update \
 	  --init
 	# Import profile's non-CDO submodules.
-	# TODO - Adapt UCO-Profile-Example reference if this CASE
-	# profile builds on a UCO profile.
 	$(MAKE) \
-	  --directory dependencies/UCO-Profile-Example \
+	  --directory dependencies/UCO-Profile-PROV-O \
 	  .git_submodule_init.done.log
 	$(MAKE) \
 	  --directory dependencies/CASE \

@@ -1,8 +1,8 @@
-# CASE Profile: Example
+# CASE Profile: PROV-O
 
 ![Repository Status](https://img.shields.io/badge/-exploratory-informational)
 
-This repository explores CASE under a usage profile assuming adoption of [Example](http://example.org/ontology).
+This repository explores CASE under a usage profile assuming adoption of [PROV-O](https://www.w3.org/TR/prov-o/).
 
 The CDO Profile development rationale and design is [here](https://cyberdomainontology.org/ontology/development/#profiles).
 
