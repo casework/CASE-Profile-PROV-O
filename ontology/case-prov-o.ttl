@@ -1,12 +1,13 @@
 # imports: http://example.org/ontology/uco-prov-o
 # imports: https://ontology.caseontology.org/case/case/1.5.0
 
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix ex: <http://example.org/ontology/example/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/ontology/case-prov-o>
@@ -17,7 +18,9 @@
 		;
 	.
 
-uco-core:UcoObject
-	rdfs:subClassOf ex:Object ;
+case-investigation:InvestigativeAction
+	rdfs:subClassOf prov:Activity ;
+	rdfs:comment "Assuming an outcome of CASE Issue 146---which is still pending discussion and resolution---an InvestigativeAction always generates at least one output: A ProvenanceRecord.  Hence an InvestigativeAction is (/would always be) a provenantial activity."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE/issues/146> ;
 	.
 

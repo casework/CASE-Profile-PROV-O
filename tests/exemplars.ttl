@@ -1,12 +1,12 @@
 # imports: http://example.org/ontology/case-prov-o
 
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://example.org/kb/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.org/kb>
@@ -16,7 +16,7 @@
 	sh:shapesGraph <http://example.org/shapes/sh-case-prov-o> ;
 	.
 
-kb:UcoObject-24cf6699-3cb6-47fa-9f62-c972b0971752
-	a uco-core:UcoObject ;
+kb:Action-255ebfa4-b036-4ced-a683-f4dd69479082
+	a case-investigation:InvestigativeAction ;
 	.
 
