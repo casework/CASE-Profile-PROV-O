@@ -1,0 +1,60 @@
+# imports: http://example.org/ontology/case-prov-o
+
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/kb>
+	a owl:Ontology ;
+	rdfs:comment "This data graph demonstrates a person's role specific to a certain InvestigativeAction."@en ;
+	rdfs:seeAlso
+		kb:Action-3377f49e-9aa9-4728-a7ed-81fda39ec8a4 ,
+		kb:Person-d4e6518e-d356-499e-960f-b82991ebdf0c ,
+		kb:Role-541cdd1f-77cc-424b-bd34-b0a5fa038930 ,
+		<https://github.com/casework/CASE-Examples/issues/155>
+		;
+	owl:imports <http://example.org/ontology/case-prov-o> ;
+	sh:shapesGraph <http://example.org/shapes/sh-case-prov-o> ;
+	.
+
+kb:Action-3377f49e-9aa9-4728-a7ed-81fda39ec8a4
+	a case-investigation:InvestigativeAction ;
+	prov:qualifiedAssociation kb:Association-026669ee-88de-446f-a9f1-166163d52a3d ;
+	uco-action:performer kb:Person-d4e6518e-d356-499e-960f-b82991ebdf0c ;
+	uco-core:description "The investigative action of Williams imaging a disk." ;
+	.
+
+kb:Association-026669ee-88de-446f-a9f1-166163d52a3d
+	a prov:Association ;
+	rdfs:seeAlso <https://www.w3.org/TR/prov-o/#narrative-example-qualified-4> ;
+	prov:agent kb:Person-d4e6518e-d356-499e-960f-b82991ebdf0c ;
+	prov:hadRole kb:Role-541cdd1f-77cc-424b-bd34-b0a5fa038930 ;
+	.
+
+kb:Person-d4e6518e-d356-499e-960f-b82991ebdf0c
+	a
+		prov:Person ,
+		uco-identity:Person
+		;
+	uco-core:description "Williams" ;
+	.
+
+kb:Role-541cdd1f-77cc-424b-bd34-b0a5fa038930
+	a
+		prov:Role ,
+		uco-core:UcoObject
+		;
+	rdfs:comment "This is potentially a uco-role:Role."@en ;
+	rdfs:seeAlso <https://www.w3.org/TR/prov-o/#narrative-example-qualified-4> ;
+	uco-core:description "The role Williams has within a certain action of imaging a disk." ;
+	.
+
